@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<style>
+.jumbotron{
+    background:url('bk.jpg');
+    background-repeat: no-repeat;
+    width:100%;
+    height: 500px;
+    position: center;
+}
+body{
+    background-color: #E6F2F0;
+}
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th,
+td {
+    padding: 5px;
+}
+</style>
+<body>
+<div class="container">
+  <div class="jumbotron">
+  </div>
+</div>
+   <div class="text-center"> <h1 >The XMLHttpRequest Object</h1>
+    <button  class="btn btn-info" type="button" onclick="loadDoc()">Get my songs collection</button></div>
+    <br>
+    <br>
+    <div class="container">
+    <table class="table"  id="content"></table>
+    </div>
+    <script>
+    function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                myFunction(this);
+            }
+        };
+        xhttp.open("GET", "indexn.xml", true);
+        xhttp.send();
+    }
+    function myFunction(xml) {
+        var i;
+        var xmlDoc = xml.responseXML;
+        var table = "<thead> <tr><th>Artist</th><th>Title</th><th>genre</th><th>country</th></tr></thead>";
+        var x = xmlDoc.getElementsByTagName("song");
+        for (i = 0; i < x.length; i++) {
+            table += "<tbody><tr><th>" +
+                x[i].getElementsByTagName("artist")[0].childNodes[0].nodeValue +
+                "</th><th>" +
+                x[i].getElementsByTagName("title")[0].childNodes[0].nodeValue +
+                "</th><th>"+
+                x[i].getElementsByTagName("genre")[0].childNodes[0].nodeValue +
+                "</th><th>"+
+                x[i].getElementsByTagName("country")[0].childNodes[0].nodeValue +
+                "</th></th></tbody>";
+        }
+        document.getElementById("content").innerHTML = table;
+    }
+    </script>
+</body>
+</html>

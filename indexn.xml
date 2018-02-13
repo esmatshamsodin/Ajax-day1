@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<catalog>
+<song id="song1">
+     <title>Same Old Love</title>
+     <artist>Selena Gomez</artist>
+     <country>America</country>
+     <genre>POp</genre>
+     <year>2015</year>
+     <description>I'm so sick of that same old love, that shit, it tears me up
+I’m so sick of that same old love, my body's had enough
+Oh-oh-oh (that same old love) [x2]</description>
+  </song>
+  <song id="song2">
+     <title>Same Old Love</title>
+     <artist>Selena Gomez</artist>
+     <country>America</country>
+     <genre>POp</genre>
+     <year>2015</year>
+     <description>I'm so sick of that same old love, that shit, it tears me up
+I’m so sick of that same old love, my body's had enough
+Oh-oh-oh (that same old love) [x2]</description>
+  </song>
+  <song id="song3">
+     <title>Same Old Love</title>
+     <artist>Selena Gomez</artist>
+     <country>America</country>
+     <genre>POp</genre>
+     <year>2015</year>
+     <description>I'm so sick of that same old love, that shit, it tears me up
+I’m so sick of that same old love, my body's had enough
+Oh-oh-oh (that same old love) [x2]</description>
+  </song>
+</catalog>
