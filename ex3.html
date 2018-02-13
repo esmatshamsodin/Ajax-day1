@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <body>
-    <h2>Store and retrieve data from local storage.</h2>
     <p id="demo"></p>
 
 <script src="ex3.json" type="text/javascript"></script>
@@ -11,7 +10,8 @@
     //Retrieving data:
     text = localStorage.getItem("ex3");
     obj = JSON.parse(text);
-    document.getElementById("demo").innerHTML = "<div class='container'>My name is "+myObj.name +myObj.lastname+" and i am "+myObj.age+" year's old."+"<br>"+"i live in "+myObj.city;
+    document.getElementById("demo").innerHTML =obj.name +" " +obj.age ;
+
 </script>
 
  </body>
